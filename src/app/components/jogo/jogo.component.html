@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="jogador">
+        <h3>Jogador 1</h3>
+        <ul>
+            <li *ngFor="let carta of maoJogador1; let i = index" (click)="selecionarCartaJ1(carta,i)">
+                <h1>
+                    {{ carta.naipe }}
+                </h1>
+                <h2>
+                    {{carta.valor}}
+                </h2>
+            </li>
+        </ul>
+    </div>
+
+    <div class="vira">
+        <p>{{manilha?.naipe}}</p>
+        <p>{{manilha?.valor}}</p>
+    </div>
+
+    <div class="jogador">
+        <h3>Jogador 2</h3>
+        <ul>
+            <li *ngFor="let carta of maoJogador2; let i = index" (click)="selecionarCartaJ2(carta,i)">
+                <h1>
+                    {{ carta.naipe }}
+                </h1>
+                <h2>
+                    {{carta.valor}}
+                </h2>
+            </li>
+        </ul>
+    </div>
+</div>
