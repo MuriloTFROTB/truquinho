@@ -18,6 +18,7 @@ export class JogoComponent {
   jogador1Jogou: boolean = false;
   cartaJ1?: Carta;
   cartaJ2?: Carta;
+  resultado: string | null = null;
 
   constructor(private truco: BaralhoService) {
   }
@@ -56,11 +57,11 @@ export class JogoComponent {
   comparaCartas() {
     if (this.cartaJ1 && this.cartaJ2) {
       if (this.cartaJ1.powerValue > this.cartaJ2.powerValue) {
-        console.log('jogador 1 ganhou')
+        this.resultado = 'jogador 1 ganhou';
       } else if (this.cartaJ1.powerValue < this.cartaJ2.powerValue) {
-        console.log('jogador 2 ganhou');
+        this.resultado = 'jogador 2 ganhou';
       } else {
-        console.log('empate');
+        this.resultado = 'empate';
       }
     }
   }
