@@ -1,6 +1,6 @@
 <div class="container">
-    <div class="jogador">
-        <h3>Jogador 1</h3>
+    <div class="jogador player2">
+        <h3>Player 1</h3>
         <ul>
             <li *ngFor="let carta of maoJogador1; let i = index" (click)="selecionarCartaJ1(carta,i)">
                 <h1>
@@ -12,18 +12,22 @@
             </li>
         </ul>
     </div>
-    
-    <div *ngIf="resultado">
+
+    <div *ngIf="resultado" class="resultado">
         <p>{{ resultado }}</p>
     </div>
 
     <div class="vira">
-        <p>{{manilha?.naipe}}</p>
-        <p>{{manilha?.valor}}</p>
+        <h1>
+            {{manilha?.naipe}}
+        </h1>
+        <h2>
+            {{manilha?.valor}}
+        </h2>
     </div>
 
-    <div class="jogador">
-        <h3>Jogador 2</h3>
+    <div class="jogador ">
+        <h3>Player 2</h3>
         <ul>
             <li *ngFor="let carta of maoJogador2; let i = index" (click)="selecionarCartaJ2(carta,i)">
                 <h1>
